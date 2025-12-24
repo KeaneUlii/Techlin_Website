@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #0088ff;
+  --light-color: #f4f4f4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 10px 15px;
+  display: block;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navbar ul li:last-child a {
+  margin-left: 10px;
+}
+
+.navbar ul li a i {
+  padding-right: 5px;
+}
+
+/* Blogs */
+.blog img {
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  padding-left: 20px;
+}
+
+.blog-text {
+  display: flex;
+}
+
+/* Utility Classes */
+.blog-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background-image: url(images/csm_header-digital-solutions_54ce04ac99.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* darkness level */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  color: #fff;
+  padding: 20px 0px;
+}
+
+.hero-content h2 {
+  color: #fff;
+  padding: 20px 0px;
+  width: 80%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.hero-picture img {
+  height: 210px;
+  width: 100%;
+}
+
+.hero-buttons {
+  padding-top: 40px;
+}
+
+.hero-buttons i {
+  padding-right: 5px;
+}
+
+.hero-buttons a {
+  margin-right: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #333;
+}
+
+.blog-btn {
+  display: flex;
+  width: 20%;
+  margin-top: 20px;
+}
