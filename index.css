@@ -63,6 +63,66 @@ img {
   padding-right: 5px;
 }
 
+/* What We Do Section */
+
+.services {
+  text-align: center;
+}
+
+.services h1 {
+  padding-top: 70px;
+  padding-bottom: 110px;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Card setup */
+.services-card {
+  position: relative;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+
+.services-card img {
+  display: block;
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay at bottom */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effects */
+
+.services-card:hover img {
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.services-card:hover .card-overlay {
+  transform: translateY(0); /* Slide up */
+  opacity: 1;
+}
+
 /* Blogs */
 .blog img {
   width: 350px;
@@ -73,25 +133,6 @@ img {
 
 .blog-text {
   display: flex;
-}
-
-/* Utility Classes */
-.blog-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.container-sm {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 /* Hero */
@@ -148,6 +189,78 @@ img {
 
 .hero-buttons a {
   margin-right: 10px;
+}
+
+/* About Us Section */
+
+/* Who We Are */
+
+.about-us-hero {
+  position: relative;
+  height: 400px;
+  background-image: url("images/istockphoto-2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  z-index: 0; /* ensure overlay works */
+}
+
+/* Dark overlay */
+.about-us-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* adjust opacity to control darkness */
+  z-index: 1;
+}
+
+/* Ensure text is above the overlay */
+.about-us-hero h1,
+.about-us-hero h2,
+.about-us-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.future {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #e2f2ff;
+  height: 100%;
+}
+
+.future h1 {
+  text-align: center;
+}
+
+/* Utility Classes */
+.blog-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-xl {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Buttons */
